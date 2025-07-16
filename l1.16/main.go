@@ -30,9 +30,8 @@ func quickSort(arr []int) []int {
 		}
 	}
 
-	// result := append(quickSort(less), pivotValue)
 	result := append(quickSort(less), arr[pivot])
-
 	result = append(result, quickSort(greater)...)
+
 	return result
 }
